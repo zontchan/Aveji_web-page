@@ -1,0 +1,69 @@
+//Fonts
+@mixin h1Web{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 120%;
+}
+@mixin h2Web{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 48px;
+}
+@mixin h3Web{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+@mixin h1Mob{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+}
+@mixin h2Mob{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 28px;
+}
+@mixin h3Mob{
+  font-family: $font-accent;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@mixin textLargeWeb{
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 18px;
+}
+@mixin textLargeBoldWeb{
+  font-family: $font-accent;
+  font-weight: bold;
+  font-size: 18px;
+}
+@mixin textNormalWeb{
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+}
+@mixin textSpecificWeb{
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+//Media
+@mixin mediaTablet{
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mediaMobile{
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

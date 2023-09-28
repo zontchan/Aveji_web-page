@@ -1,0 +1,111 @@
+.company-info{
+  margin-bottom: 120px;
+}
+.company-info_container{
+  display: flex;
+  justify-content: space-between;
+}
+.company-info_title-desktop{
+  flex-shrink: 0;
+  width: 40%;
+}
+.company-info_title-mobile{
+  display: none;
+}
+.company-info_main{
+  width: 49%;
+  padding-top: 30px;
+  .description{
+    line-height: 140%;
+    margin-bottom: 44px;
+    p{
+      width: 66%;
+    }
+    p + p{
+      margin-top: 16px;
+    }
+  }
+
+  .points{
+    .point{
+      p{
+        width: 25%;
+        line-height: 140%;
+      }
+    }
+    .point + .point{
+      margin-top: 24px;
+    }
+  }
+}
+
+@include mediaTablet{
+  .company-info_title-desktop{
+    @include h1Mob;
+  }
+  .company-info_main{
+    .description{
+      p{
+        width: 100%;
+      }
+    }
+
+    .points{
+      .point{
+        p{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .points {
+    .point {
+      h3 {
+        @include h1Mob;
+      }
+
+    }
+  }
+
+}
+
+@include mediaMobile{
+  .company-info{
+    margin-bottom: 48px;
+  }
+  .company-info_container{
+    flex-direction: column;
+  }
+  .company-info_title-desktop{
+    display: none;
+  }
+  .company-info_title-mobile{
+    display: block;
+    @include h2Mob;
+  }
+  .company-info_main{
+    width: 100%;
+    padding-top: 20px;
+
+    .description{
+      margin-bottom: 32px;
+    }
+
+
+    .points{
+      .point{
+        h3{
+          @include h3Mob;
+        }
+        p{
+          width: 45%;
+          line-height: 140%;
+        }
+      }
+      .point + .point{
+        margin-top: 20px;
+      }
+    }
+  }
+}

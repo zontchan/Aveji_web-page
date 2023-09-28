@@ -1,0 +1,139 @@
+.header{
+  padding-top: 12px;
+  @include textLargeWeb();
+}
+.header-row{
+  display: flex;
+  margin-bottom: 40px;
+}
+.header-logo{
+  flex-shrink: 0;
+}
+.header-nav{
+  margin-left: 63%;
+}
+.burger-menu{
+  display: none;
+}
+.nav-list{
+  margin-right: 20%;
+}
+.nav-item + .nav-item{
+  margin-top: 8px;
+}
+.header-phone{
+  margin-left: auto;
+  cursor: pointer;
+}
+
+
+.header-content{
+  position: relative;
+  margin-bottom: 120px;
+}
+.header-content-pics{
+ padding-top: 235px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  .linked-interior{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    .link{
+      text-align: end;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+}
+.header-content-title{
+  position: absolute;
+  max-width: 794px;
+  .title{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .subtitle{
+   @include textLargeWeb();
+    font-size: 20px;
+    line-height: 140%;
+    display: block;
+    max-width: 55%;
+  }
+}
+
+@include mediaTablet{
+  .header-row{
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-list{
+    display: none;
+  }
+  .header-phone{
+    display: none;
+  }
+  .burger-menu{
+    width: 50px;
+    height: 25px;
+    display: block;
+    img{
+      width: 100%;
+    }
+  }
+  .header-content-pics{
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    .desktop-pic{
+      display: none;
+    }
+    .linked-interior{
+      gap: 24px;
+      .link{
+        text-align: start;
+      }
+    }
+  }
+  .header-content-title{
+    position: static;
+    margin-bottom: 64px;
+    max-width: 594px;
+    .title{
+      @include h2Web;
+    }
+  }
+}
+
+@include mediaMobile{
+  .header{
+    padding-top: 8px;
+  }
+  .header-content{
+    margin-bottom: 48px;
+  }
+  .header-row{
+    margin-bottom: 20px;
+  }
+  .header-logo{
+    width: 39px;
+  }
+  .burger-menu{
+    width: auto;
+  }
+
+  .header-content-title{
+    max-width: 343px;
+    margin-bottom: 24px;
+    .title{
+      @include h1Mob;
+      margin-bottom: 20px;
+    }
+    .subtitle{
+      @include textNormalWeb();
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.feedback-form{
+  margin-bottom: 120px;
+}
+.feedback-form-container{
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.feedback-form-content{
+  max-width: 678px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    input{
+      padding-bottom: 12px;
+      border-bottom: 1px solid  $main-color;
+      max-width: 562px;
+    }
+    input::placeholder{
+      color: $main-color;
+      transition: color 0.2s ease-in-out;
+    }
+    input:focus::placeholder{
+      color: #8d8d8d;
+    }
+    input+input{
+      margin-top: 16px;
+    }
+    button{
+      margin-top: 32px;
+      padding: 12px 20px;
+      background-color: $main-color;
+      color: $bg-color;
+      align-self: start;
+      transition: all 0.2s ease-in-out;
+    }
+    button:hover{
+      background-color: $accent-color;
+      color: $main-color;
+    }
+  }
+}
+
+.form-title{
+  h2{
+    margin-bottom: 32px;
+  }
+  p{
+    line-height: 140%;
+  }
+
+  margin-bottom: 72px;
+}
+
+.apps-row{
+  a+a{
+    margin-left: 8px;
+  }
+  img{
+    transition: all 0.2s ease-in-out;
+  }
+  img:hover{
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .feedback-form-container{
+   align-items: center;
+  }
+}
+
+@include mediaTablet{
+
+  .form-title{
+    h2{
+      @include h1Mob;
+    }
+  }
+
+}
+
+@include mediaMobile {
+  .feedback-form{
+    margin-bottom: 60px;
+  }
+  .form-title{
+    margin-bottom: 32px;
+    h2{
+      @include h2Mob;
+      margin-bottom: 20px;
+    }
+  }
+  .feedback-form-container{
+    picture{
+      display: none;
+    }
+  }
+
+  .feedback-form-content{
+    form{
+
+      button{
+        margin-top: 20px;
+      }
+    }
+  }
+
+}
