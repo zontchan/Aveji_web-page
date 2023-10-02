@@ -29,6 +29,10 @@ projectsList.addEventListener('mousemove', dragging);
 
 document.addEventListener('mouseup', dragStop);
 
+projectsList.addEventListener('touchstart', dragStart);
+projectsList.addEventListener('touchmove', dragging);
+
+document.addEventListener('touchend', dragStop);
 
 
 //AOS
